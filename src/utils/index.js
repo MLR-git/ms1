@@ -53,3 +53,18 @@ export const buildNeighbours = (data, height, width) => {
     }
     return copy;
 }
+
+/*
+export const showEmptyCells = (h, w, x, y, data) => {
+    let neighbours = buildNumberSpaces(x, y, data, h, w);
+    neighbours.map((cell) => {
+        if(!cell.isRevealed && (cell.isEmpty || !cell.isSnake)){
+            Object.assign(data[cell.x][cell.y], {isRevealed: true});
+            if(cell.isEmpty){
+                showEmptyCells(h, w, cell.x, cell.y, data)
+            }
+        }
+        return null;
+    });
+    return data;
+};*/
